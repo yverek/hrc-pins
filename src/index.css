@@ -1,6 +1,40 @@
 /*
-    HRC COLORS
-    Red     #993520
-    Yellow  #F9B200
-    Black   #000000
+  HRC COLORS
+  Red     #993520
+  Yellow  #F9B200
+  Black   #000000
 */
+
+.mynav {
+  border: 2px solid #993520;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.myBtn {
+  background-color: #F9B200;
+  border: 2px solid #993520;
+  color: #993520;
+  font-weight: bold;
+}
+
+.list-group-item {
+  border: 0;
+  padding: 0.25rem 1rem;
+}
+
+.continent {
+  border-bottom: 1px dashed #993520;
+}
+
+.badge {
+  float: right;
+  font-size: 100%;
+  background-color: #F9B200;
+  color: #993520;
+}
+
+.nav-top {
+  border-bottom: 2px solid #993520;
+}
