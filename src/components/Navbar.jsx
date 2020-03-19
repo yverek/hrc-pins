@@ -20,6 +20,7 @@ class Navbar extends Component {
           count={continent.count}
           firstContinent={(i === 0) ? true : false}
           lastContinent={(arr.length - 1 === i) ? true : false}
+          checked={(this.props.selectedContinent === continent.id) ? true : false}
         />
       )
     })

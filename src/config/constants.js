@@ -2,18 +2,26 @@ const PINS = [
   {
     id: 'worldwide',
     name: 'Worldwide',
-    count: 3
+    count: 20
   },
   {
     id: 'usa-canada',
     name: 'USA / Canada',
-    count: 1,
+    count: 3,
     countries: [
       // USA
       {
         id: 'united-states',
         name: 'United States',
         cities: [
+          {
+            id: 'niagara-falls-usa',
+            name: 'Niagara Falls USA'
+          },
+          {
+            id: 'new-york',
+            name: 'New York'
+          },
           {
             id: 'washington-dc',
             name: 'Washington DC'
@@ -40,8 +48,78 @@ const PINS = [
   {
     id: 'europe',
     name: 'Europe',
-    count: 4,
+    count: 17,
     countries: [
+      // Austria
+      {
+        id: 'austria',
+        name: 'Austria',
+        cities: [
+          {
+            id: 'vienna',
+            name: 'Vienna'
+          }
+        ]
+      },
+      // England
+      {
+        id: 'england',
+        name: 'England',
+        cities: [
+          {
+            id: 'london',
+            name: 'London'
+          }
+        ]
+      },
+      // France
+      {
+        id: 'france',
+        name: 'France',
+        cities: [
+          {
+            id: 'nice',
+            name: 'Nice'
+          },
+          {
+            id: 'paris',
+            name: 'Paris'
+          }
+        ]
+      },
+      // Germany
+      {
+        id: 'germany',
+        name: 'Germany',
+        cities: [
+          {
+            id: 'berlin',
+            name: 'Berlin'
+          }
+        ]
+      },
+      // Greece
+      {
+        id: 'greece',
+        name: 'Greece',
+        cities: [
+          {
+            id: 'athens',
+            name: 'Athens'
+          }
+        ]
+      },
+      // Ireland
+      {
+        id: 'ireland',
+        name: 'ireland',
+        cities: [
+          {
+            id: 'dublin',
+            name: 'Dublin'
+          }
+        ]
+      },
       // Italy
       {
         id: 'italy',
@@ -51,25 +129,70 @@ const PINS = [
             id: 'florence',
             name: 'Florence'
           },
-/*           {
+          {
             id: 'rome',
             name: 'Rome'
-          }, */
+          },
           {
             id: 'venice',
             name: 'Venice'
           }
         ]
       },
-      // France
+      // Netherlands
       {
-        id: 'france',
-        name: 'France',
+        id: 'netherlands',
+        name: 'Netherlands',
         cities: [
-/*           {
-            id: 'paris',
-            name: 'Paris'
-          } */
+          {
+            id: 'amsterdam',
+            name: 'Amsterdam'
+          }
+        ]
+      },
+      // Poland
+      {
+        id: 'poland',
+        name: 'Poland',
+        cities: [
+          {
+            id: 'warsaw',
+            name: 'Warsaw'
+          }
+        ]
+      },
+      // Scotland
+      {
+        id: 'scotland',
+        name: 'Scotland',
+        cities: [
+          {
+            id: 'edinburgh',
+            name: 'Edinburgh'
+          },
+          {
+            id: 'glasgow',
+            name: 'Glasgow'
+          }
+        ]
+      },
+      // Spain
+      {
+        id: 'spain',
+        name: 'Spain',
+        citien: [
+          {
+            id: 'madrid',
+            name: 'Madrid'
+          },
+          {
+            id: 'mallorca',
+            name: 'Mallorca'
+          },
+          {
+            id: 'marbella',
+            name: 'Marbella'
+          }
         ]
       }
     ]
@@ -107,40 +230,5 @@ const PINS = [
     count: 0
   },
 ]
-
-/*
-  1  - USA / Canada
-  2  - Mexico / Central America
-  3  - Caribbean
-  4  - South America
-  5  - Europe
-  6  - Middle East / Africa
-  7  - Pacific Rim
-  8  - Asia
-  9  - India
-*/
-
-/* const PINS = [
-  {
-    continent: CONTINENTS[5].id,
-    country: 'France',
-    city: 'Paris'
-  },
-  {
-    continent: CONTINENTS[5].id,
-    country: 'Italy',
-    city: 'Rome'
-  },
-  {
-    continent: CONTINENTS[5].id,
-    country: 'Italy',
-    city: 'Venice'
-  },
-  {
-    continent: CONTINENTS[1].id,
-    country: 'USA',
-    city: 'Niagara Falls'
-  }
-] */
 
 export { PINS }
