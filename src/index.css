@@ -5,14 +5,31 @@
   Black   #000000
 */
 
-.mynav {
+.my-nav {
   border: 2px solid #993520;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
 
-.myBtn {
+.my-input {
+  border: 2px solid #993520;
+
+}
+
+.my-input:focus {
+  border-color: #993520;
+  box-shadow: none !important;
+  font-weight: bold;
+  content: "";
+}
+
+.form-control {
+  height: 100%;
+  margin-left: -1px;
+}
+
+.my-btn {
   background-color: #F9B200;
   border: 2px solid #993520;
   color: #993520;

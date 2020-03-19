@@ -2,12 +2,25 @@ const PINS = [
   {
     id: 'worldwide',
     name: 'Worldwide',
-    count: 0
+    count: 3
   },
   {
     id: 'usa-canada',
     name: 'USA / Canada',
-    count: 0,
+    count: 1,
+    countries: [
+      // USA
+      {
+        id: 'united-states',
+        name: 'United States',
+        cities: [
+          {
+            id: 'washington-dc',
+            name: 'Washington DC'
+          }
+        ]
+      }
+    ]
   },
   {
     id: 'mexico-centralamerica',
@@ -27,7 +40,7 @@ const PINS = [
   {
     id: 'europe',
     name: 'Europe',
-    count: 0,
+    count: 4,
     countries: [
       // Italy
       {
@@ -35,12 +48,16 @@ const PINS = [
         name: 'Italy',
         cities: [
           {
-            id: 'rome',
-            name: 'Rome'
-          },
-          {
             id: 'florence',
             name: 'Florence'
+          },
+/*           {
+            id: 'rome',
+            name: 'Rome'
+          }, */
+          {
+            id: 'venice',
+            name: 'Venice'
           }
         ]
       },
@@ -49,10 +66,10 @@ const PINS = [
         id: 'france',
         name: 'France',
         cities: [
-          {
+/*           {
             id: 'paris',
             name: 'Paris'
-          }
+          } */
         ]
       }
     ]
@@ -60,7 +77,19 @@ const PINS = [
   {
     id: 'middleeast-africa',
     name: 'Middle East / Africa',
-    count: 0
+    count: 1,
+    countries: [
+      {
+        id: 'egypt',
+        name: 'Egypt',
+        cities: [
+          {
+            id: 'sharm-el-sheikh',
+            name: 'Sharm el Sheikh'
+          }
+        ]
+      }
+    ]
   },
   {
     id: 'pacific-rim',

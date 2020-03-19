@@ -13,15 +13,25 @@ class App extends Component {
     super(props)
     // thx to this answer https://stackoverflow.com/questions/2236747/what-is-the-use-of-the-javascript-bind-method
     this.handleContinentChange = this.handleContinentChange.bind(this)
+    this.handleSearch = this.handleSearch.bind(this)
     this.state = {
-      selectedContinent: "worldwide"
+      selectedContinent: "worldwide",
+      search: ""
     }
   }
 
   handleContinentChange(event) {
     this.setState({
-      selectedContinent: event.target.id
+      selectedContinent: event.target.id,
+      search: ""
     });
+  }
+
+  handleSearch(event) {
+    this.setState({
+      selectedContinent: "worldwide",
+      search: event.target.value
+    })
   }
 
   render() {
@@ -31,7 +41,7 @@ class App extends Component {
           <Header />
           <Row className="justify-content-md-center">
             <Col md={4} lg={4}>
-              <Navbar selectedContinent={this.state.selectedContinent} handleContinentChange={this.handleContinentChange} />
+              <Navbar selectedContinent={this.state.selectedContinent} handleContinentChange={this.handleContinentChange} handleSearch={this.handleSearch} />
             </Col>
             <Col md={8} lg={8}>
               <Board selectedContinent={this.state.selectedContinent} />
