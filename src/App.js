@@ -44,7 +44,7 @@ class App extends Component {
               <Navbar selectedContinent={this.state.selectedContinent} handleContinentChange={this.handleContinentChange} handleSearch={this.handleSearch} />
             </Col>
             <Col md={8} lg={8}>
-              <Board selectedContinent={this.state.selectedContinent} />
+              <Board selectedContinent={this.state.selectedContinent} search={this.state.search} />
             </Col>
           </Row>
         </Container>

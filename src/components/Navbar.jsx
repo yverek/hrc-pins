@@ -30,12 +30,12 @@ class Navbar extends Component {
   render() {
     return (
       <div className="my-nav">
-        <div className="text-center py-4 px-5 nav-top">
+        <div className="text-center py-4 px-4 nav-top">
           <InputGroup>
             <InputGroup.Prepend>
               <Button className="my-btn"><FontAwesomeIcon icon={faSearch} /></Button>
             </InputGroup.Prepend>
-            <FormControl aria-describedby="search" className="my-input" onChange={event => this.props.handleSearch(event)} />
+            <FormControl aria-describedby="search" className="my-input" onChange={event => this.props.handleSearch(event)} placeholder="Eg. Italy, France, Rome, ecc" />
           </InputGroup>
         </div>
         <h2 className="pt-2 pl-2 text-center">Filter</h2>
