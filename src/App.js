@@ -1,49 +1,40 @@
 import React, { Component } from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
-import './index.css'
+
 import Header from './components/Header'
 import Navbar from './components/Navbar'
-//import Board from './components/Board'
+import Board from './components/Board'
+
+import { Container, Row, Col } from 'react-bootstrap'
+import './index.css'
+
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    // thx to this answer https://stackoverflow.com/questions/2236747/what-is-the-use-of-the-javascript-bind-method
+    this.handleContinentChange = this.handleContinentChange.bind(this)
+    this.state = {
+      selectedContinent: "worldwide"
+    }
+  }
+
+  handleContinentChange(event) {
+    this.setState({
+      selectedContinent: event.target.id
+    });
+  }
+
   render() {
     return (
       <div className="App">
         <Container>
           <Header />
           <Row className="justify-content-md-center">
-            <Col md={4}>
-              <Navbar />
+            <Col md={4} lg={4}>
+              <Navbar selectedContinent={this.state.selectedContinent} handleContinentChange={this.handleContinentChange} />
             </Col>
-            <Col md={8}>
-              <div className="media">
-                <img src="https://via.placeholder.com/150" className="align-self-center mr-3" alt="..." />
-                <div className="media-body">
-                  <h5 className="mt-0">Pin 1</h5>
-                  <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                </div>
-              </div><br />
-              <div className="media">
-                <img src="https://via.placeholder.com/150" className="align-self-center mr-3" alt="..." />
-                <div className="media-body">
-                  <h5 className="mt-0">Pin 2</h5>
-                  <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                </div>
-              </div><br />
-              <div className="media">
-                <img src="https://via.placeholder.com/150" className="align-self-center mr-3" alt="..." />
-                <div className="media-body">
-                  <h5 className="mt-0">Pin 3</h5>
-                  <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                </div>
-              </div><br />
-              <div className="media">
-                <img src="https://via.placeholder.com/150" className="align-self-center mr-3" alt="..." />
-                <div className="media-body">
-                  <h5 className="mt-0">Pin 4</h5>
-                  <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                </div>
-              </div><br />
+            <Col md={8} lg={8}>
+              <Board selectedContinent={this.state.selectedContinent} />
             </Col>
           </Row>
         </Container>

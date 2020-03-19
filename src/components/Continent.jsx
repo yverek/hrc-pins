@@ -7,7 +7,7 @@ class Continent extends Component {
         <div className="custom-control custom-radio">
           <input type="radio" className="custom-control-input" id={this.props.id} name="continents" defaultChecked={this.props.firstContinent} />
           <label className="custom-control-label" htmlFor={this.props.id}>{this.props.name}</label>
-          <span className="badge">{this.props.count}</span>
+          <span className="badge">{this.props.pinsQnt}</span>
         </div>
       </li>
     )

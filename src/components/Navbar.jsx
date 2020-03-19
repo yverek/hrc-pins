@@ -5,20 +5,13 @@ import Continent from './Continent'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons'
 
-import { CONTINENTS } from '../config/constants'
+import { PINS } from '../config/constants'
 
 class Navbar extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      selectedContinent: "worldwide"
-    }
-  }
-
   populateContinentsList = () => {
     let continentsList = []
 
-    CONTINENTS.map((continent, i, arr) => {
+    PINS.map((continent, i, arr) => {
       return continentsList.push(
         <Continent
           key={continent.id}
@@ -27,17 +20,12 @@ class Navbar extends Component {
           count={continent.count}
           firstContinent={(i === 0) ? true : false}
           lastContinent={(arr.length - 1 === i) ? true : false}
+          pinsQnt={arr.length}
         />
       )
     })
 
     return continentsList
-  }
-
-  handleContinentChange(event) {
-    this.setState({
-      selectedContinent: event.target.id
-    })
   }
 
   render() {
@@ -47,7 +35,7 @@ class Navbar extends Component {
           <Button variant="primary" className="myBtn"><FontAwesomeIcon icon={faPlusCircle} /> Add Pin</Button>
         </div>
         <h2 className="pt-2 pl-2">Filter</h2>
-        <ul className="list-group pb-2" onChange={event => this.handleContinentChange(event)}>
+        <ul className="list-group pb-2" onChange={event => this.props.handleContinentChange(event)}>
           {this.populateContinentsList()}
         </ul>
       </div>
