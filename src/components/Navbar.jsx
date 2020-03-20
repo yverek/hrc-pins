@@ -29,7 +29,7 @@ class Navbar extends Component {
 
   render() {
     return (
-      <div className="my-nav sticky-top">
+      <div className="my-nav">
         <div className="text-center py-4 px-4 nav-top">
           <InputGroup>
             <InputGroup.Prepend>

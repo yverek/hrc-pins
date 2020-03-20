@@ -39,7 +39,9 @@ class App extends Component {
       <div className="App">
         <Container>
           <Header />
+
           <Row className="justify-content-md-center">
+
             <Col md={4} lg={4} className="sidebar sticky-top">
               <Navbar 
                 selectedContinent={this.state.selectedContinent}
@@ -47,12 +49,14 @@ class App extends Component {
                 handleSearch={this.handleSearch}
               />
             </Col>
+
             <Col md={8} lg={8} className="pl-5">
               <Board
                 selectedContinent={this.state.selectedContinent}
                 search={this.state.search}
               />
             </Col>
+
           </Row>
         </Container>
       </div>

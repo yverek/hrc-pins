@@ -6,7 +6,7 @@
 */
 
 .sidebar {
-  padding: 50px 15px;
+  padding: 50px 25px;
   width: 350px;
   height: 650px;
 }
@@ -71,6 +71,11 @@
 
 .nav-top {
   border-bottom: 2px solid #993520;
+}
+
+.pin-attr {
+  color: #993520;
+  font-weight: bold;
 }
 
 .modal-title {
