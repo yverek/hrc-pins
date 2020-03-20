@@ -180,7 +180,7 @@ const PINS = [
       {
         id: 'spain',
         name: 'Spain',
-        citien: [
+        cities: [
           {
             id: 'madrid',
             name: 'Madrid'
