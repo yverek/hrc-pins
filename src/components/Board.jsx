@@ -8,7 +8,7 @@ class Board extends Component {
     let pinsList = []
 
     PINS.forEach(continent => {
-      // if there are no pins in data structure, we have to skip this cycle otherwise app will give a runtime error
+      // if there are no pins in data structure, we have to skip this cycle otherwise the app will give us a runtime error
       if(continent.countries !== undefined) {
         if(this.props.search === "" && (selectedContinent === 'worldwide' || selectedContinent === continent.id)) { // if user is not searching
           continent.countries.forEach(country => {

@@ -10,8 +10,8 @@ class Navbar extends Component {
   populateContinentsList = () => {
     let continentsList = []
 
-    PINS.map((continent, i, arr) => {
-      return continentsList.push(
+    PINS.forEach((continent, i, arr) => {
+      continentsList.push(
         <Continent
           key={continent.id}
           id={continent.id}
@@ -35,7 +35,7 @@ class Navbar extends Component {
             <InputGroup.Prepend>
               <Button className="my-btn"><FontAwesomeIcon icon={faSearch} /></Button>
             </InputGroup.Prepend>
-            <FormControl aria-describedby="search" className="my-input" onChange={event => this.props.handleSearch(event)} placeholder="Eg. Italy, France, Rome, ecc" />
+            <FormControl aria-describedby="search" className="my-input" onChange={event => this.props.handleSearch(event)} placeholder="E.g. Italy, France, Rome, ecc" />
           </InputGroup>
         </div>
         <h2 className="pt-2 pl-2 text-center">Filter</h2>
