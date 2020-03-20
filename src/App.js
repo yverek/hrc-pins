@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
-
-import Header from './components/Header'
+import { Header } from './components/Header'
 import Navbar from './components/Navbar'
 import Board from './components/Board'
-
 import { Container, Row, Col } from 'react-bootstrap'
 import './index.css'
 
@@ -29,6 +27,8 @@ class App extends Component {
 
   handleSearch(event) {
     this.setState({
+      // worldwide because Board component shows all pins at every character submitted by user
+      // it's like a live search
       selectedContinent: "worldwide",
       search: event.target.value
     })
@@ -40,11 +40,18 @@ class App extends Component {
         <Container>
           <Header />
           <Row className="justify-content-md-center">
-            <Col md={4} lg={4}>
-              <Navbar selectedContinent={this.state.selectedContinent} handleContinentChange={this.handleContinentChange} handleSearch={this.handleSearch} />
+            <Col md={4} lg={4} className="sidebar sticky-top">
+              <Navbar 
+                selectedContinent={this.state.selectedContinent}
+                handleContinentChange={this.handleContinentChange}
+                handleSearch={this.handleSearch}
+              />
             </Col>
-            <Col md={8} lg={8}>
-              <Board selectedContinent={this.state.selectedContinent} search={this.state.search} />
+            <Col md={8} lg={8} className="pl-5">
+              <Board
+                selectedContinent={this.state.selectedContinent}
+                search={this.state.search}
+              />
             </Col>
           </Row>
         </Container>

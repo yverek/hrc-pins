@@ -5,6 +5,12 @@
   Black   #000000
 */
 
+.sidebar {
+  padding: 50px 15px;
+  width: 350px;
+  height: 650px;
+}
+
 .my-nav {
   border: 2px solid #993520;
   -webkit-border-radius: 10px;
@@ -39,11 +45,12 @@
   color: transparent;
 }
 
-.my-btn {
-  background-color: #F9B200;
-  border: 2px solid #993520;
-  color: #993520;
+.my-btn, .my-btn:hover, .my-btn:focus, .my-btn:active {
+  background-color: #F9B200 !important;
+  border: 2px solid #993520 !important;
+  color: #993520 !important;
   font-weight: bold;
+  box-shadow: none !important;
 }
 
 .list-group-item {

@@ -2,7 +2,7 @@ const PINS = [
   {
     id: 'worldwide',
     name: 'Worldwide',
-    count: 20
+    count: 21
   },
   {
     id: 'usa-canada',

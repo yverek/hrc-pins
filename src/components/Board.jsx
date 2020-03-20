@@ -1,15 +1,9 @@
 import React, { Component } from 'react'
-
 import Pin from './Pin'
-
 import { PINS } from '../config/constants'
 
 
 class Board extends Component {
-  handleSearch() {
-
-  }
-
   populatePinsList = (selectedContinent) => {
     let pinsList = []
 
@@ -30,13 +24,13 @@ class Board extends Component {
                 />
               )
             })
+            return pinsList
           })
+          return pinsList
         } else if(this.props.search !== "") {
-          console.log("cerca!")
           continent.countries.map(country => {
             country.cities.map(city => {
               if(country.name.toLowerCase().includes(this.props.search.toLowerCase()) || city.name.toLowerCase().includes(this.props.search.toLowerCase())) {
-                console.log("trovato")
                 return pinsList.push(
                   <Pin
                     key={city.id}
@@ -50,6 +44,7 @@ class Board extends Component {
                 )
               }
             })
+            return pinsList
           })
         }
       }
