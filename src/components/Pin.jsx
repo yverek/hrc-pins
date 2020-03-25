@@ -10,7 +10,7 @@ export const Pin = (props) => {
   const imgSrc = '/pin_pics/' + props.continent_id + '/' + props.country_id + '/' + props.city_id + '.jpg'
 
   return(
-    <>
+    <div>
       <Media className="py-2 align-items-center">
         <Image
           width={114}
@@ -54,7 +54,7 @@ export const Pin = (props) => {
           <Button variant="btn my-btn" onClick={() => handleShow(!show)}>Close</Button>
         </Modal.Footer>
       </Modal>
-    </>
+    </div>
   )
 }
 

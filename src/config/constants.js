@@ -1,3 +1,19 @@
+/*
+  PINS = [
+    continent
+      |
+      |-> country
+      |    |
+      |    |-> city
+      |    |
+      |    |-> city
+      |
+      |-> country
+      
+      ecc
+  ]
+*/
+
 const PINS = [
   {
     id: 'worldwide',
