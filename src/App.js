@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Header } from './components/Header'
 import { Navbar } from './components/Navbar'
-import Board from './components/Board'
+import { Board } from './components/Board'
 import { Container, Row, Col } from 'react-bootstrap'
 import './index.css'
 
