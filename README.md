@@ -1,3 +1,6 @@
+# hrc-pins
+A simple app to handle my Hard Rock Cafe pins.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
